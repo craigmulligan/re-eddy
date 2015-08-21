@@ -16,5 +16,11 @@ e.g FROM resin/raspberrypi2-node
 
 It reads CPU usage serves the live reading on webpage served from the device using resin.io's device urls. The url is cast to bluetooth devices in the area. 
 
-Powerlevel (range) can be adjust by setting a resin.io [environment variable](http://docs.resin.io/#/pages/using/env-vars.md)
+Powerlevel (range) can be adjust by setting a resin.io [environment variable](http://docs.resin.io/#/pages/using/env-vars.md) with the key `PWR`
+
+```
+eg. PWR = -50 (ranges = -100 to 20, default = -21)
+```
+
+
 
