@@ -1,0 +1,31 @@
+<!doctype html>  
+<html lang="en">  
+    <meta name="viewport" content="width=device-width">
+    <head>
+    <style>
+    .content {
+        width: 100%;
+        text-align: center;
+        padding-top: 20%;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="content">
+            <h3>Beacon's Live CPU Usage</h3>
+            <h1 id="reading"></h1>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="/socket.io/socket.io.js"></script> 
+        <script type="text/javascript">
+        var socket = io.connect(window.location.href);
+        socket.on('connect', function(data) {
+            socket.emit('request');
+        });
+        socket.on('reading', function(data) {
+            $('#reading').html(data + "%");
+            socket.emit('request');
+        });
+        </script>           
+    </body>
+</html>  
