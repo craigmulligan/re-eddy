@@ -4,7 +4,7 @@
 
 This is a demo uses resin.io and google's beacon format to set up a fleet of iBeacons - *[The physical web](https://google.github.io/physical-web/)*.
 
-This runs on any resin supported device. You will just need to change the base image in FROM command in the [dockerfile](). 
+This runs on any resin supported device. You will just need to change the [resin base image](https://hub.docker.com/u/resin/) in FROM command in the [dockerfile](https://github.com/craig-mulligan/re-eddy/blob/master/Dockerfile). 
 
 ```
 e.g FROM resin/edison-node
