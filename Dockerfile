@@ -1,4 +1,4 @@
-FROM resin/edison-node
+FROM resin/raspberrypi-node
 
 # install dependencies
 RUN apt-get update && apt-get install -y bluetooth bluez libbluetooth-dev
